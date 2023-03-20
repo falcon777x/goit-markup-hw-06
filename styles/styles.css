@@ -27,6 +27,11 @@ ul {
 	margin: 0;
 	padding: 0;
 }
+/* due to this we can cancell default outline !!!!!!!!!!!!!! */
+input, textarea {
+	outline: none;
+}
+/* ___________________________________________________________ */
 /* --------------------------------- */
 
 body {
@@ -81,15 +86,14 @@ a {
 	color: var(--primary-title-color);
 
 	transition-property: color;
-    transition-duration: 250ms; 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation-links .link:focus,
 .navigation-links .link:hover {
 	color: var(--hover-link-color);
 }
-
 
 /* .navigation-links:last-child  */
 
@@ -108,10 +112,10 @@ a {
 	letter-spacing: 0.02em;
 
 	color: var(--primary-text-color);
-	
+
 	transition-property: color;
-    transition-duration: 250ms; 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address:focus,
@@ -146,7 +150,7 @@ a {
 	text-align: center;
 }
 
-.hero-section-button {
+.hero-section-button, .send-button-item {
 	padding: 16px 32px;
 
 	min-width: 169px;
@@ -162,17 +166,19 @@ a {
 	color: #fff;
 
 	transition-property: background-color;
-    transition-duration: 250ms; 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.hero-section-button:hover,
-.hero-section-button:focus {
+.hero-section-button:hover, .hero-section-button:focus,
+.send-button-item:hover, .send-button-item:focus {
 	background-color: var(--hover-link-color);
 }
 
-button, input[type="button"], input[type="submit"] {
+button,
+input[type="button"],
+input[type="submit"] {
 	cursor: pointer;
-  }
+}
 
 /* ----------------------------------------------------------------------------------------------------------------- */
 h3 {
@@ -215,13 +221,12 @@ h2 {
 .portfolio-card-item {
 	position: relative;
 	overflow: hidden;
-
 }
 
 .portfolio-card-overlay {
-	background-color: #4D5AE5;
-	color: #F4F4FD;
-	
+	background-color: #4d5ae5;
+	color: #f4f4fd;
+
 	padding: 40px 32px;
 	position: absolute;
 	top: 0;
@@ -230,12 +235,11 @@ h2 {
 	width: 100%;
 	transform: translateY(100%);
 	transition: transform 0.25s linear;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	overflow: auto;
-	}
-	
-/* ------------------------------------------------- */
+}
 
+/* ------------------------------------------------- */
 
 .kind-of-content {
 	font-family: Roboto;
@@ -268,8 +272,8 @@ h2 {
 	letter-spacing: 0.04em;
 
 	transition-property: color, border-color, background-color, box-shadow;
-    transition-duration: 250ms; 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filters-buttons:focus,
@@ -345,7 +349,7 @@ footer {
 .nav-link-item {
 	display: block;
 	padding-top: 24px;
-	padding-bottom: 14px;  
+	padding-bottom: 14px;
 	/* i have changed it from 24px to 14px to put blue-line on hero section */
 }
 
@@ -449,7 +453,6 @@ nav {
 	padding-bottom: 32px;
 }
 
-
 /* .portfolios:hover, 
 .portfolios:focus {
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -459,11 +462,10 @@ nav {
 	transform: translateY(0);
 }
 
-.portfolio-card-item-list:hover, .portfolio-card-item-list:focus {
+.portfolio-card-item-list:hover,
+.portfolio-card-item-list:focus {
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
-
-
 
 .portfolios {
 	display: block;
@@ -527,8 +529,8 @@ address {
 	background-color: #4d5ae5;
 
 	transition-property: background-color;
-    transition-duration: 250ms; 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card-social-link:hover,
 .card-social-link:focus {
@@ -549,8 +551,6 @@ address {
 .customers-list {
 	display: flex;
 	justify-content: space-between;
-
-
 }
 .customers-list-item {
 	width: 168px;
@@ -559,8 +559,8 @@ address {
 	border-radius: 4px;
 
 	transition-property: color, border-color;
-    transition-duration: 250ms; 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-list-link {
 	display: flex;
@@ -571,24 +571,20 @@ address {
 	color: #8e8f99;
 
 	transition-property: color;
-    transition-duration: 250ms; 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-	
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.customers-list-item:hover, .customers-list-item:hover .customers-list-link
- {
+.customers-list-item:hover,
+.customers-list-item:hover .customers-list-link {
 	border-color: #404bbf;
 	color: #404bbf;
 	/* fill: #404bbf; */
-
 }
 .customers-list-item:focus-within .customers-list-link {
 	border-color: #404bbf;
 	color: #404bbf;
 }
-
 
 .customers-list-icon {
 	fill: currentColor;
@@ -597,7 +593,7 @@ address {
 /* .customers-list-item:hover .customers-list-icon {
 	fill: #404bbf;
   } */
-  
+
 /* --------------------------------------footer section------------------------------------ */
 
 .footer-line {
@@ -634,8 +630,8 @@ address {
 	background-color: rgba(255, 255, 255, 0.1);
 
 	transition-property: background-color;
-    transition-duration: 250ms; 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-media-icon {
 	color: #fff;
@@ -644,76 +640,280 @@ address {
 .social-media-link:focus {
 	background-color: #31d0aa;
 }
+/* _____________________________________________________________________________________________________________________________ */
+/* .subscribe-form {
+	margin-left: 80px;
+} */
+
+/* label input {
+	margin-right: 24px;
+} */
+
+.subscribe-form-item {
+	display: flex;
+	justify-content: space-between;
+	width: 453px;
+}
+
+
+.subscribe-title {
+	margin-bottom: 16px;
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+	color: #fff;
+}
+/* to do e-mail white */
+.subscribe-field-item ::placeholder {
+	color: #fff;
+}
+
+.subscribe-title-item {
+	color: #ffffff;
+	background-color: #4d5ae5;
+	border-radius: 4px;
+	border: none;
+
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: 0.04em;
+
+	transition-property: background-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	/* width: 165px;
+	height: 40px; */
+}
+.subscribe-title-item:hover, .subscribe-title-item:focus {
+	background-color: var(--hover-link-color);
+}
+.subscribe-field {
+	display: flex;
+	padding-left: 24px;
+	padding-right: 24px;
+	padding-top: 8px;
+	padding-bottom: 4px;
+}
+/* to moov icon to the right */
+.subscribe-style-title {
+	margin-right: 16px;
+}
+
+.mail-title > ::placeholder {
+	color: #fff;
+	background-color: #4d5ae5;
+}
+
+.email-text {
+	
+	color: #ffffff;
+	width: 264px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 16px;
+
+	font-family: Roboto;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 0.04em;
+	text-align: left;
+    border: 1px solid #fff;
+	border-radius: 4px;
+	background-color: var(--primary-title-color);
+}
+
+/* to moove subscribe block to the right */
+.social-media {
+	margin-right: 80px;
+}
 /* ----------------------------------------------------------animation---------------------------- */
 
- .navigation-links .active::after {
-	content: '';
+.navigation-links .active::after {
+	content: "";
 	display: block;
 	width: 100%;
 	height: 4px;
 	background-color: var(--hover-link-color); /* change to the desired color */
-	margin-top: 5px; 
+	margin-top: 5px;
 	/* adjust to the desired distance from the link */
 	border-radius: 2px;
 	position: relative;
 	bottom: -14.5px;
-  }
-  nav .link.active {
+}
+nav .link.active {
 	color: var(--hover-link-color);
-  }  
+}
 
-	.backdrop {
-		width: 100%;
-		height: 100%;
-		background-color: rgba(46, 47, 66, 0.4);
-		position: fixed;
-		top: 0;
-		left: 0;
+.backdrop {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(46, 47, 66, 0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
 
-		transition: opacity, visibility;
-		transition-duration: 250ms; 
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	}
-	.modal {
-		width: 408px;
-		height: 576px;
-		border-radius: 4px;
-		background-color: #FCFCFC;
-		padding: 20px;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-	.modal-close {
-		width: 24px;
-		height: 24px;
-		border: 1px solid rgba(0, 0, 0, 0.1);
-		background-color: #E7E9FC;
+	transition: opacity, visibility;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal {
+	width: 408px;
+	height: 576px;
+	border-radius: 4px;
+	background-color: #fcfcfc;
+	padding: 24px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.modal-close {
+	width: 24px;
+	height: 24px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	background-color: #e7e9fc;
 
-		border-radius: 50%;
-		display: flex;
-		margin-left: auto;
-		/* to do crist in the middle */
-		align-items: center;
-		justify-content: center;
-          /*add transition to border color   */
-		transition-property: border-color;
-		transition-duration: 250ms; 
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	}
-	.is-hidden {
-		opacity: 0;
-		visibility: hidden;
-		pointer-events: none;
-	}
+	border-radius: 50%;
+	display: flex;
+	margin-left: auto;
+	/* to do crist in the middle */
+	align-items: center;
+	justify-content: center;
+	/*add transition to border color   */
+	transition-property: border-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-	.modal-close:hover {
-		border-color: var(--hover-link-color);
-		background-color: var(--hover-link-color);
-	}
+	margin-bottom: 24px;
+}
+.is-hidden {
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
 
-	/* this we need to change cross color during closing the window  */
-	.modal-close:hover .modal-close-btn-icon {
-		fill: #F4F4FD;
-	}
+.modal-close:hover {
+	border-color: var(--hover-link-color);
+	background-color: var(--hover-link-color);
+}
+
+/* this we need to change cross color during closing the window  */
+.modal-close:hover .modal-close-btn-icon {
+	fill: #f4f4fd;
+}
+/* ---------------------------------filling modal window--------------------------------------------------- */
+.modal-window-title {
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+	text-align: center;
+	font-weight: 500;
+
+	margin-bottom: 16px;
+}
+.form-input {
+	width: 100%;
+	height: 40px;
+	border-radius: 4px;
+	border: 1px solid rgba(46, 47, 66, 0.2);
+	color: #2E2F4266 0.4;
+}
+
+.form-input:hover, .form-input:focus, .comment-input:hover, .comment-input:focus {
+	border-color: #4D5AE5;
+}
+
+
+.agriment-item {
+	color: #8E8F99;
+
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 14px;
+	letter-spacing: 0.04em;
+	text-align: left;	
+
+}
+
+.form-title {
+color: #8E8F99;
+
+font-size: 12px;
+font-weight: 400;
+line-height: 14px;
+letter-spacing: 0.04em;
+text-align: left;
+}
+
+
+
+textarea {
+	resize: none;
+	width: 100%;
+	height: 120px;
+	border: 1px solid rgba(46, 47, 66, 0.2);
+	border-radius: 4px;
+	padding: 8px 16px;
+}
+
+.send-button-item {
+	margin-top: 24px;
+}
+
+/* put button in the middle */
+.form-send-button {
+display: flex;
+justify-content: center;
+}
+
+/* change input text style */
+.modal-form input {
+/* color: rgba(46, 47, 66, 0.4); */
+
+font-family: Roboto;
+font-size: 12px;
+font-weight: 400;
+line-height: 1.17;
+letter-spacing: 0.04em;
+text-align: left;
+padding-left: 38px;
+padding-right: 16px;
+}
+
+
+.form-logo-item {
+	position: absolute;
+	display: inline-block;
+}
+/* --------put icon inside input ----------------- */
+.input-with-icon {
+	position: relative;
+  }
+
+  .form-logo-item {
+	position: absolute;
+	top: 50%;
+	left: 19px;
+	transform: translateY(-50%);
+	fill: #2E2F42;
+  }
+  .form-logo-item-mail {
+	left: 17.5px;
+  }
+  
+  
+
+  .form-input:focus ~ .form-logo-item {
+	fill: #4D5AE5;
+  }
+  
+  /*________________________________________________ */

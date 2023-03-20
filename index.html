@@ -355,8 +355,27 @@
 					</li>
 				</ul>
 			</div>
+			<!-- ---------------------creating subscribe form ---------------------------------------------->
+			<div class="subscribe-form">
+               <h4 class="subscribe-title">Subscribe</h4>
+			   <form class="subscribe-form-item">
+				<label class="subscribe-field-item">
+					<input type="email" class="email-text" name="mail" id="mail" placeholder="E-mail">
+				</label>
+				<button type="submit" class="subscribe-title-item">
+					<ul class="subscribe-field">
+						<li class="subscribe-style-title">Subscribe</li>
+						<li><a href="">
+							<svg class="subscribe-svg-item" width="24px" height="20px">
+								<use href="./images/icons.svg#icon-plane"></use></svg></a></li>
+					</ul>
+				</button>
+			   </form>
+
+			</div>
 		</div>
 		</footer>
+		<!-- creating modal window -->
 		<div class="backdrop is-hidden" data-modal>
 			<div class="modal">
 				<button type="button" data-modal-close class="modal-close">
@@ -364,6 +383,43 @@
 						<use href="./images/icons.svg#icon-cross"></use>
 					</svg>
 				</button>
+				<h3 class="modal-window-title">Leave your contacts and we will call you back</h3>
+				<form class="modal-form">
+					
+					    <label for="name" class="form-title">Name</label>
+						<div class="input-with-icon">
+					      <input type="text" name="name" id="name" class="form-input">
+					      
+							<svg class="form-logo-item" width="12px" height="12px">
+							<use href="./images/icons.svg#icon-personicon"></use></svg>
+						</div>
+					
+					<label for="tel" class="form-title">Phone</label>
+					<div class="input-with-icon">
+					<input type="tel" name="phone" id="tel" class="form-input">
+					
+						<svg class="form-logo-item" width="13px" height="13px">
+						<use href="./images/icons.svg#icon-phoneicon"></use></svg>
+				   </div>
+
+					<label for="mail-title" class="form-title" >Email</label>
+					<div class="input-with-icon">
+					<input type="email" name="mail" id="mail-title" class="form-input">
+					
+						<svg class="form-logo-item form-logo-item-mail" width="15px" height="12px">
+						<use href="./images/icons.svg#icon-mailicon"></use></svg>
+				    </div>
+				
+					<label for="comment" class="form-title">Comment</label>
+					<textarea name="comment" id="comment" rows="10" class="comment-input"></textarea>
+				
+					<input type="checkbox" name="user-agreement-confirmation" value="" id="checkbox-agree" class="checkbox-style">
+					<label for="checkbox-agree" class="agriment-item">I accept the terms and conditions of the Privacy Policy</label>
+					<div class="form-send-button">
+						<button type="submit" class="send-button-item">Send</button>
+					</div>
+					
+				</form>
 			</div>
 		</div>
 		<script src="./js/modal.js"></script>

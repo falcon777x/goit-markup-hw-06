@@ -917,3 +917,15 @@ padding-right: 16px;
   }
   
   /*________________________________________________ */
+
+  /* ---------------------CHECKBOX------------------------------------------------ */
+  /* standart checkbox del */
+  /* .checkbox {
+	appearance: none;
+  } */
+  .checkbox {
+ display: inline-block;
+ height: 16px;
+ width: 16px;
+ background-color: tomato;
+  }
